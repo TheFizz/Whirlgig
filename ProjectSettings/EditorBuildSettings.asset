@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: e1f1d9f9e6125204cab5cf8894fd262f
+  - enabled: 1
+    path: Assets/Scenes/SegmentsEditMenu.unity
+    guid: 49ce68fdc1bbc0f4689e5aeb1d9c5373
+  - enabled: 1
+    path: Assets/Scenes/Whirlgig.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  m_configObjects: {}
