@@ -25,6 +25,10 @@ public class TableGenerator : MonoBehaviour
 
     void Start()
     {
+        segmentMatPrimary.color = Static_Data.primaryColor;
+        segmentMatSecondary.color = Static_Data.secondaryColor;
+        segmentMat13.color = Static_Data.thirteenColor;
+
         segments = Static_Data.segments;
         GenerateTable();
         GenerateBorders();
@@ -86,6 +90,7 @@ public class TableGenerator : MonoBehaviour
             tmp.GetComponent<MeshCollider>().sharedMesh = mesh;
             tmp.name = "Segment " + i;
             tmp.transform.SetParent(segmentHolder.transform);
+            tmp.isStatic = true;
             if (i == 12)
             {
                 tmp.GetComponent<MeshRenderer>().material = segmentMat13;
@@ -125,13 +130,15 @@ public class TableGenerator : MonoBehaviour
             border.transform.localScale = new Vector3(0.2f, 0.01f, Vector3.Distance(Vector3.zero, pinpoint.transform.position));
             border.transform.position = midpoint;
             border.transform.LookAt(Vector3.zero);
-            border.transform.GetComponent<MeshRenderer>().material.color = new Color32(0,0,0,255);
+            border.transform.GetComponent<MeshRenderer>().material.color = new Color32(132,118,84,255);
             border.transform.SetParent(borderHolder.transform);
+            border.isStatic = true;
             GameObject.Destroy(border.transform.GetComponent<BoxCollider>());
         }
     }
     void GenerateLetters()
     {
+
         Static_Data.letters = new GameObject[segments];
         Static_Data.nexts = new GameObject[segments];
 
@@ -146,6 +153,11 @@ public class TableGenerator : MonoBehaviour
         int anchorOffset = (angleFraction / 2);
         int curPlacingPoint = anchorOffset;
 
+        if (Static_Data.customDummy != null)
+        {
+            dummy = Static_Data.customDummy;
+        }
+
         for (int i = 0; i < segments; i++)
         {
             GameObject letter;
@@ -155,6 +167,12 @@ public class TableGenerator : MonoBehaviour
             {
                 letter = Instantiate(letterPrefab);
                 letter.GetComponentInChildren<TextMesh>().text = Static_Data.segmentOptions[i];
+
+                if (Static_Data.whiteFont)
+                {
+                    letter.GetComponentInChildren<TextMesh>().color = Color.white;
+                }
+
                 try
                 {
                     if (Static_Data.pics[i] != null) { letter.transform.Find("PicContainer").transform.GetComponent<Renderer>().material = Static_Data.pics[i]; }
@@ -165,7 +183,18 @@ public class TableGenerator : MonoBehaviour
                         letter.transform.Find("PicContainer").transform.GetComponent<Renderer>().material = mat;
                     } //what.
                 }
+
                 catch { }
+
+                if(!Static_Data.filesLoaded)
+                {
+                    letter.transform.Find("PicContainer").gameObject.SetActive(false);
+                }
+
+                if(Static_Data.customLetter!=null)
+                {
+                    letter.transform.Find("Plane").transform.GetComponent<Renderer>().material.mainTexture = Static_Data.customLetter;
+                }
             }
 
             Vector3 placePoint = points[anchorOffset + (i * angleFraction)];

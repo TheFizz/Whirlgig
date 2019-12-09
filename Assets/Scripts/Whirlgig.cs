@@ -35,7 +35,7 @@ public class Whirlgig : MonoBehaviour
     int targetSector = 4;
     void Update()
     {
-        if (impulse > 500)
+        if (impulse >= 399)
         {
             detector.gameObject.SetActive(true);
             slowable = true;
@@ -150,7 +150,7 @@ public class Whirlgig : MonoBehaviour
             return;
         }
         System.Random random = new System.Random();
-        targetImpulse = random.Next(510, 850);
+        targetImpulse = random.Next(400, 600);
         pushAnimation.Play();
         spinStarted = true;
 
@@ -194,6 +194,7 @@ public class Whirlgig : MonoBehaviour
             segmentAngles[i, 0] = tmpStart;
             segmentAngles[i, 1] = tmpFin;
         }
+        slowable = false;
         StartSpin();
     }
 }

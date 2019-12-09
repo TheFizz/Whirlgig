@@ -8,11 +8,13 @@ public class SegmentsEditor : MonoBehaviour
 {
     // Start is called before the first frame update
     public Dropdown dropdown;
+    public Toggle toggle;
     public InputField sectorNameInput;
     public Dictionary<int, string> segmentOptions = new Dictionary<int, string>();
 
     void Start()
     {
+
         for (int i = 0; i < Static_Data.segments; i++)
         {
             segmentOptions.Add(i, (i + 1).ToString());
@@ -46,5 +48,11 @@ public class SegmentsEditor : MonoBehaviour
     public void SendSegmentsAndStart()
     {
         Static_Data.segmentOptions = segmentOptions;
+        Static_Data.whiteFont = toggle.isOn;
+    }
+
+    public void picker(int i)
+    {
+        Static_Data.pickerMode = i;
     }
 }

@@ -1,9 +1,7 @@
 ﻿using Crosstales.FB;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
-using UnityEditor;
+using System.Linq;
 using UnityEngine;
 
 public class LoadFromFile : MonoBehaviour
@@ -22,11 +20,13 @@ public class LoadFromFile : MonoBehaviour
             mat.name = i.ToString();
             if (file.Extension == ".jpg")
             {
+                int picNum=0;
+                try { picNum = Convert.ToInt32(file.Name.Replace(file.Extension, "")); }
+                catch { continue; }
                 byte[] bytes = File.ReadAllBytes(file.FullName);
                 Texture2D tex = new Texture2D(100, 100);
                 tex.LoadImage(bytes);
                 mat.mainTexture = tex;
-                int picNum = Convert.ToInt32(file.Name.Replace(file.Extension, ""));
                 if (picNum < Static_Data.segments - 1)
                     pics[picNum] = mat;
                 i++;
@@ -49,5 +49,22 @@ public class LoadFromFile : MonoBehaviour
             }
         }
         Static_Data.pics = pics;
+        Static_Data.filesLoaded = true;
+    }
+    public void LoadCustomLetter()
+    {
+        string path = FileBrowser.OpenSingleFile();
+        byte[] bytes = File.ReadAllBytes(path);
+        Texture2D tex = new Texture2D(800, 450);
+        tex.LoadImage(bytes);
+        Static_Data.customLetter = tex;
+    }
+    public void LoadCustomDummy()
+    {
+        string path = FileBrowser.OpenSingleFile();
+        byte[] bytes = File.ReadAllBytes(path);
+        Texture2D tex = new Texture2D(100, 100);
+        tex.LoadImage(bytes);
+        Static_Data.customDummy = tex;
     }
 }
