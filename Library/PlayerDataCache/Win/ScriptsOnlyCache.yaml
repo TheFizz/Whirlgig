@@ -47,25 +47,25 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 10974}
+      Script: {instanceID: 10956}
     - Class: 114
-      Script: {instanceID: 11142}
+      Script: {instanceID: 11110}
     - Class: 114
-      Script: {instanceID: 11182}
+      Script: {instanceID: 11150}
     - Class: 114
-      Script: {instanceID: 11192}
+      Script: {instanceID: 11514}
     - Class: 114
-      Script: {instanceID: 11572}
+      Script: {instanceID: 11850}
     - Class: 114
-      Script: {instanceID: 11930}
+      Script: {instanceID: 12032}
     - Class: 114
-      Script: {instanceID: 11938}
+      Script: {instanceID: 12296}
     - Class: 114
-      Script: {instanceID: 12136}
+      Script: {instanceID: 12634}
     - Class: 114
-      Script: {instanceID: 12424}
+      Script: {instanceID: 13000}
     - Class: 114
-      Script: {instanceID: 12784}
+      Script: {instanceID: 13050}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -100,37 +100,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 10974}
+      Script: {instanceID: 10956}
     - Class: 114
-      Script: {instanceID: 11142}
+      Script: {instanceID: 11110}
     - Class: 114
-      Script: {instanceID: 11144}
+      Script: {instanceID: 11112}
     - Class: 114
-      Script: {instanceID: 11182}
+      Script: {instanceID: 11150}
     - Class: 114
-      Script: {instanceID: 11192}
+      Script: {instanceID: 11430}
     - Class: 114
-      Script: {instanceID: 11486}
+      Script: {instanceID: 11514}
     - Class: 114
-      Script: {instanceID: 11572}
+      Script: {instanceID: 11676}
     - Class: 114
-      Script: {instanceID: 11748}
+      Script: {instanceID: 11850}
     - Class: 114
-      Script: {instanceID: 11846}
+      Script: {instanceID: 12032}
     - Class: 114
-      Script: {instanceID: 11938}
+      Script: {instanceID: 12296}
     - Class: 114
-      Script: {instanceID: 12136}
+      Script: {instanceID: 12624}
     - Class: 114
-      Script: {instanceID: 12424}
+      Script: {instanceID: 12634}
     - Class: 114
-      Script: {instanceID: 12772}
+      Script: {instanceID: 12650}
     - Class: 114
-      Script: {instanceID: 12784}
+      Script: {instanceID: 13000}
     - Class: 114
-      Script: {instanceID: 12800}
+      Script: {instanceID: 13046}
     - Class: 114
-      Script: {instanceID: 12836}
+      Script: {instanceID: 13118}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -183,29 +183,29 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 10974}
+      Script: {instanceID: 10956}
     - Class: 114
-      Script: {instanceID: 11128}
+      Script: {instanceID: 11110}
     - Class: 114
-      Script: {instanceID: 11142}
+      Script: {instanceID: 11150}
     - Class: 114
-      Script: {instanceID: 11182}
+      Script: {instanceID: 11514}
     - Class: 114
-      Script: {instanceID: 11424}
+      Script: {instanceID: 11850}
     - Class: 114
-      Script: {instanceID: 11572}
+      Script: {instanceID: 12032}
     - Class: 114
-      Script: {instanceID: 11660}
+      Script: {instanceID: 12296}
     - Class: 114
-      Script: {instanceID: 11938}
+      Script: {instanceID: 12634}
     - Class: 114
-      Script: {instanceID: 12136}
+      Script: {instanceID: 12998}
     - Class: 114
-      Script: {instanceID: 12424}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 12718}
+      Script: {instanceID: 13028}
     - Class: 114
-      Script: {instanceID: 12784}
+      Script: {instanceID: 13106}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -249,12 +249,6 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: b45802ab2e7472bb2967f0e47c86737a
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.UI
-    className: UIFocus
-  - hash:
-      serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -271,12 +265,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
-  - hash:
-      serializedVersion: 2
-      Hash: b2c4ed9cf045213c7a083987398cfc61
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Whirlgig
   - hash:
       serializedVersion: 2
       Hash: fc108ce7d98c40ac0907e8ca7f500c76
@@ -310,21 +298,9 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MenuButton
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: TestResultRendererCallback
-  - hash:
-      serializedVersion: 2
-      Hash: 4ab5ec27e7e897f073fff64963ee64a4
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.UI
-    className: UIHint
   - hash:
       serializedVersion: 2
       Hash: 9e70ecf91466f07d9bd649be625cae52
@@ -369,12 +345,6 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
-      Hash: 500dcfa22c2a0b592251a315f677e23d
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.Common.Util
-    className: RandomScaler
-  - hash:
-      serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -387,22 +357,10 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
-      Hash: 7f2dc2091d1aa7e457c271453a1459ec
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.UI.Util
-    className: AudioSourceController
-  - hash:
-      serializedVersion: 2
       Hash: 00274a21279f5cb831ce20f895049e38
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
-  - hash:
-      serializedVersion: 2
-      Hash: 3f2e57a5884c2c9093d95a3e33a359ee
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CameraMovement
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -421,12 +379,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
-  - hash:
-      serializedVersion: 2
-      Hash: e7521e8047e92cf22b3aa8771e8949f4
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.FB.Demo
-    className: Examples
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -453,40 +405,10 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
-      Hash: 6d4191fbdf4c160ccd69f04de5396e7e
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.FB.Demo
-    className: GUIScenes
-  - hash:
-      serializedVersion: 2
       Hash: 8dc90e648ac06f43bdd31ac9fa8f4579
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
-  - hash:
-      serializedVersion: 2
-      Hash: 4b4b6c61a3b858c7f5a5c64990309257
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.FB.Demo
-    className: GUIMain
-  - hash:
-      serializedVersion: 2
-      Hash: 35c9d66d3b7d7dfa83badebcec9cbb6d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GetKeys
-  - hash:
-      serializedVersion: 2
-      Hash: dff57befba8a0eef2d0d2a5f406a7053
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.UI
-    className: UIResize
-  - hash:
-      serializedVersion: 2
-      Hash: 8df755367e6b6592b04d0058b10fe321
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.Common.Util
-    className: RandomColor
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -501,12 +423,6 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: f9e52bee81e32943a15d90647f460a9d
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.Common.Util
-    className: RandomRotator
-  - hash:
-      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -517,12 +433,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
-  - hash:
-      serializedVersion: 2
-      Hash: a16646a3bc232159e7b95906562ba281
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SegmentsEditor
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -537,12 +447,6 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: e3b9ca3c57ed0438341f39c2de2bdcd7
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SendValues
-  - hash:
-      serializedVersion: 2
       Hash: 516824a435828eadd660ef2f1658a48e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -555,28 +459,10 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: f61ed95dba8824dcf936b8e6ea3fc801
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.Common.Util
-    className: FreeCam
-  - hash:
-      serializedVersion: 2
-      Hash: 720123875ef449259481ad70e5eb5cdf
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.Common.Util
-    className: PlatformController
-  - hash:
-      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Static_Data
   - hash:
       serializedVersion: 2
       Hash: 12e64d607873da15ad3f833620350d51
@@ -585,28 +471,10 @@ ScriptsOnlyBuild:
     className: InputField
   - hash:
       serializedVersion: 2
-      Hash: 254450cc74c81c2c18428ca7383346b2
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.UI.Util
-    className: FPSDisplay
-  - hash:
-      serializedVersion: 2
       Hash: 3f8d7b92a6be3c715e55d5cfa7cc8384
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.UI
-    className: UIDrag
-  - hash:
-      serializedVersion: 2
-      Hash: f9b22d5311c141c6699ca239d398c008
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.UI
-    className: UIWindowManager
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -645,12 +513,6 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 1e0bb537d51d60a6519a5ed5588559b4
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.UI.Util
-    className: ScrollRectHandler
-  - hash:
-      serializedVersion: 2
       Hash: ee0cef6caaac8ae485bfa82f000f0f7b
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -687,12 +549,6 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 020f7ec2a651d1f4a40ee30e6ebf82d1
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.UI
-    className: WindowManager
-  - hash:
-      serializedVersion: 2
       Hash: 5372ed2ce39229b1ac910757999a8be2
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -717,22 +573,10 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 0949cca95835c1df4fb603a9edd3e92d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TableGenerator
-  - hash:
-      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Outline
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.UI
-    className: Social
   - hash:
       serializedVersion: 2
       Hash: 3f52d34ea17dfc771004b80f5d492445
@@ -777,28 +621,190 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.UI
-    className: StaticManager
-  - hash:
-      serializedVersion: 2
       Hash: 85c97bcc5f84eeb0999d75902803b99d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Slider
   - hash:
       serializedVersion: 2
-      Hash: b4ccd45a6b0cda8de9db99d0c60439c6
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: Crosstales.UI.Util
-    className: AudioFilterController
-  - hash:
-      serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ToggleGroup
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: b45802ab2e7472bb2967f0e47c86737a
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.UI
+    className: UIFocus
+  - hash:
+      serializedVersion: 2
+      Hash: 6b6394ff6ab0e5515506cfb653d27431
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Whirlgig
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuButton
+  - hash:
+      serializedVersion: 2
+      Hash: 4ab5ec27e7e897f073fff64963ee64a4
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.UI
+    className: UIHint
+  - hash:
+      serializedVersion: 2
+      Hash: 500dcfa22c2a0b592251a315f677e23d
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.Common.Util
+    className: RandomScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 7f2dc2091d1aa7e457c271453a1459ec
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.UI.Util
+    className: AudioSourceController
+  - hash:
+      serializedVersion: 2
+      Hash: 3f2e57a5884c2c9093d95a3e33a359ee
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraMovement
+  - hash:
+      serializedVersion: 2
+      Hash: e7521e8047e92cf22b3aa8771e8949f4
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.FB.Demo
+    className: Examples
+  - hash:
+      serializedVersion: 2
+      Hash: 6d4191fbdf4c160ccd69f04de5396e7e
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.FB.Demo
+    className: GUIScenes
+  - hash:
+      serializedVersion: 2
+      Hash: 4b4b6c61a3b858c7f5a5c64990309257
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.FB.Demo
+    className: GUIMain
+  - hash:
+      serializedVersion: 2
+      Hash: 35c9d66d3b7d7dfa83badebcec9cbb6d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GetKeys
+  - hash:
+      serializedVersion: 2
+      Hash: dff57befba8a0eef2d0d2a5f406a7053
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.UI
+    className: UIResize
+  - hash:
+      serializedVersion: 2
+      Hash: 8df755367e6b6592b04d0058b10fe321
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.Common.Util
+    className: RandomColor
+  - hash:
+      serializedVersion: 2
+      Hash: f9e52bee81e32943a15d90647f460a9d
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.Common.Util
+    className: RandomRotator
+  - hash:
+      serializedVersion: 2
+      Hash: 8a9f7cb54bfa977f43cc1c0c14dd71b6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SegmentsEditor
+  - hash:
+      serializedVersion: 2
+      Hash: e3b9ca3c57ed0438341f39c2de2bdcd7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SendValues
+  - hash:
+      serializedVersion: 2
+      Hash: f61ed95dba8824dcf936b8e6ea3fc801
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.Common.Util
+    className: FreeCam
+  - hash:
+      serializedVersion: 2
+      Hash: 720123875ef449259481ad70e5eb5cdf
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.Common.Util
+    className: PlatformController
+  - hash:
+      serializedVersion: 2
+      Hash: b79abfea3e30b1b5be2d7704e47ad34b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Static_Data
+  - hash:
+      serializedVersion: 2
+      Hash: 254450cc74c81c2c18428ca7383346b2
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.UI.Util
+    className: FPSDisplay
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.UI
+    className: UIDrag
+  - hash:
+      serializedVersion: 2
+      Hash: f9b22d5311c141c6699ca239d398c008
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.UI
+    className: UIWindowManager
+  - hash:
+      serializedVersion: 2
+      Hash: 1e0bb537d51d60a6519a5ed5588559b4
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.UI.Util
+    className: ScrollRectHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 020f7ec2a651d1f4a40ee30e6ebf82d1
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.UI
+    className: WindowManager
+  - hash:
+      serializedVersion: 2
+      Hash: 0ee7d1116a3605ff33afc558d4d62051
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TableGenerator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.UI
+    className: Social
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.UI
+    className: StaticManager
+  - hash:
+      serializedVersion: 2
+      Hash: b4ccd45a6b0cda8de9db99d0c60439c6
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: Crosstales.UI.Util
+    className: AudioFilterController
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -811,12 +817,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: Crosstales.Common.Util
     className: TakeScreenshot
-  - hash:
-      serializedVersion: 2
-      Hash: c3d3430df9e3ea95e3e3d587961390fb
-    assemblyName: Unity.Timeline.dll
-    namespaceName: UnityEngine.Timeline
-    className: PlayableTrack
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

@@ -7,6 +7,8 @@ public class TableGenerator : MonoBehaviour
     int segments = 8;
     int angleFraction = 20;
 
+    public GameObject spin;
+    public GameObject dome;
     public GameObject whirlgigArrow;
     public GameObject pinpoint;
 
@@ -25,16 +27,20 @@ public class TableGenerator : MonoBehaviour
 
     void Start()
     {
-        segmentMatPrimary.color = Static_Data.primaryColor;
-        segmentMatSecondary.color = Static_Data.secondaryColor;
-        segmentMat13.color = Static_Data.thirteenColor;
-
         segments = Static_Data.segments;
         GenerateTable();
         GenerateBorders();
         GenerateLetters();
-        whirlgigArrow.transform.eulerAngles = new Vector3(0, ((360f / segments) + (360f / segments) / 2), 0);
+        System.Random rnd = new System.Random();
+        whirlgigArrow.transform.eulerAngles = new Vector3(0, rnd.Next(359), 0);
 
+        segmentMatPrimary.color = Static_Data.primaryColor;
+        segmentMatSecondary.color = Static_Data.secondaryColor;
+        segmentMat13.color = Static_Data.thirteenColor;
+
+        whirlgigArrow.GetComponentInChildren<Renderer>().material.color = Static_Data.arrowColor;
+        dome.GetComponent<Renderer>().material.color = Static_Data.domeColor;
+        spin.GetComponent<Renderer>().material.color = Static_Data.spinColor;
     }
     void GenerateTable()
     {
@@ -90,7 +96,6 @@ public class TableGenerator : MonoBehaviour
             tmp.GetComponent<MeshCollider>().sharedMesh = mesh;
             tmp.name = "Segment " + i;
             tmp.transform.SetParent(segmentHolder.transform);
-            tmp.isStatic = true;
             if (i == 12)
             {
                 tmp.GetComponent<MeshRenderer>().material = segmentMat13;
@@ -130,15 +135,13 @@ public class TableGenerator : MonoBehaviour
             border.transform.localScale = new Vector3(0.2f, 0.01f, Vector3.Distance(Vector3.zero, pinpoint.transform.position));
             border.transform.position = midpoint;
             border.transform.LookAt(Vector3.zero);
-            border.transform.GetComponent<MeshRenderer>().material.color = new Color32(132,118,84,255);
+            border.transform.GetComponent<MeshRenderer>().material.color = Static_Data.bordersColor;
             border.transform.SetParent(borderHolder.transform);
-            border.isStatic = true;
             GameObject.Destroy(border.transform.GetComponent<BoxCollider>());
         }
     }
     void GenerateLetters()
     {
-
         Static_Data.letters = new GameObject[segments];
         Static_Data.nexts = new GameObject[segments];
 
@@ -153,11 +156,6 @@ public class TableGenerator : MonoBehaviour
         int anchorOffset = (angleFraction / 2);
         int curPlacingPoint = anchorOffset;
 
-        if (Static_Data.customDummy != null)
-        {
-            dummy = Static_Data.customDummy;
-        }
-
         for (int i = 0; i < segments; i++)
         {
             GameObject letter;
@@ -167,7 +165,8 @@ public class TableGenerator : MonoBehaviour
             {
                 letter = Instantiate(letterPrefab);
                 letter.GetComponentInChildren<TextMesh>().text = Static_Data.segmentOptions[i];
-
+                if (Static_Data.pics == null)
+                    GameObject.Destroy(letter.transform.Find("PicContainer").gameObject);
                 if (Static_Data.whiteFont)
                 {
                     letter.GetComponentInChildren<TextMesh>().color = Color.white;
@@ -179,19 +178,17 @@ public class TableGenerator : MonoBehaviour
                     else
                     {
                         Material mat = new Material(Shader.Find("Unlit/Texture"));
-                        mat.mainTexture = dummy;
+                        if (Static_Data.customDummy == null)
+                            mat.mainTexture = dummy;
+                        else
+                            mat.mainTexture = Static_Data.customDummy;
                         letter.transform.Find("PicContainer").transform.GetComponent<Renderer>().material = mat;
                     } //what.
                 }
 
                 catch { }
 
-                if(!Static_Data.filesLoaded)
-                {
-                    letter.transform.Find("PicContainer").gameObject.SetActive(false);
-                }
-
-                if(Static_Data.customLetter!=null)
+                if (Static_Data.customLetter != null)
                 {
                     letter.transform.Find("Plane").transform.GetComponent<Renderer>().material.mainTexture = Static_Data.customLetter;
                 }

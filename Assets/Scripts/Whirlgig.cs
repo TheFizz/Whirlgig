@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,41 +26,56 @@ public class Whirlgig : MonoBehaviour
     public Button SpinPlusButton;
     public Button CenterButton;
     public InputField targetSectorInput;
-
+    public List<int> selectableSectors;
     float anglesPerSector;
 
     int[] pts = new int[4];
 
     float[,] segmentAngles = new float[Static_Data.segments, 2];
 
-    int targetSector = 4;
+    public int targetSector = 4;
+    bool preStop = false;
+    bool dragable = false;
     void Update()
     {
-        if (impulse >= 399)
+        if (impulse >= 280)
         {
             detector.gameObject.SetActive(true);
             slowable = true;
         }
+        if (dragable && impulse <= 100)
+            impulse = 100;
         if (SecretFeature && slowable && impulse < 120 && impulse > 15)
         {
             if (whirlgigArrow.transform.eulerAngles.y >= segmentAngles[pts[3], 0] && whirlgigArrow.transform.eulerAngles.y <= segmentAngles[pts[3], 1])
             {
                 impulse = 60;
+                preStop = true;
+                dragable = false;
             }
             if (whirlgigArrow.transform.eulerAngles.y >= segmentAngles[pts[2], 0] && whirlgigArrow.transform.eulerAngles.y <= segmentAngles[pts[2], 1])
             {
                 impulse = 50;
+                preStop = true;
+                dragable = false;
             }
             if (whirlgigArrow.transform.eulerAngles.y >= segmentAngles[pts[1], 0] && whirlgigArrow.transform.eulerAngles.y <= segmentAngles[pts[1], 1])
             {
                 impulse = 40;
+                preStop = true;
+                dragable = false;
             }
-            if (whirlgigArrow.transform.eulerAngles.y >= segmentAngles[pts[0], 0] && whirlgigArrow.transform.eulerAngles.y <= segmentAngles[pts[0], 1])
+            if (whirlgigArrow.transform.eulerAngles.y >= segmentAngles[pts[0], 0] && whirlgigArrow.transform.eulerAngles.y <= segmentAngles[pts[0], 1]&&preStop)
             {
                 System.Random random = new System.Random();
-                impulse = random.Next(15, 20);
+                dragable = false;
+                impulse = random.Next(18, 22);
                 SecretFeature = false;
                 slowable = false;
+            }
+            else if(!preStop)
+            {
+                impulse = 110;
             }
         }
         if (targetImpulse != 0 && spinStarted)
@@ -138,21 +154,36 @@ public class Whirlgig : MonoBehaviour
         }
     }
 
-    public void StartSpin()
+    public void CheckScript()
     {
-        if(discardedLetters == Static_Data.letters.Length-1)
+        if (Static_Data.scriptedSectors.Count > 0)
+        {
+            targetSectorInput.text = Static_Data.scriptedSectors[0].ToString();
+            Static_Data.scriptedSectors.RemoveAt(0);
+            SpecialSpin();
+        }
+        else
+        {
+            StartSpin();
+        }
+    }
+
+    public void StartSpin(int from = 300, int to = 400)
+    {
+        if (discardedLetters == Static_Data.letters.Length - 1)
         {
             for (int i = 0; i < Static_Data.letters.Length; i++)
             {
-                if(Static_Data.letters[i]!=null)
-                CameraMovement.CameraToLetter(Static_Data.letters[i]);
+                if (Static_Data.letters[i] != null)
+                    CameraMovement.CameraToLetter(Static_Data.letters[i]);
             }
             return;
         }
         System.Random random = new System.Random();
-        targetImpulse = random.Next(400, 600);
+        targetImpulse = random.Next(from, to);
         pushAnimation.Play();
         spinStarted = true;
+        preStop = false;
 
         SpinButton.interactable = false;
         try { SpinPlusButton.interactable = false; }
@@ -169,9 +200,48 @@ public class Whirlgig : MonoBehaviour
             targetSectorInput.text = "";
             return;
         }
+
         detector.gameObject.SetActive(false);
         SecretFeature = true;
+        dragable = true;
         targetSector = Convert.ToInt32(targetSectorInput.text);
+
+        int ghostTarget = targetSector - 1;
+        int ghostIndex = targetSector - 2;
+
+        if (ghostTarget <= 0)
+        {
+            ghostTarget = Static_Data.segments + ghostTarget;
+        }
+
+        if (ghostIndex < 0)
+        {
+            ghostIndex = Static_Data.segments + ghostIndex;
+        }
+
+        selectableSectors = new List<int>();
+        selectableSectors.Add(targetSector);
+
+
+        while (Static_Data.letters[ghostIndex] == null)
+        {
+            selectableSectors.Add(ghostTarget);
+            ghostTarget -= 1;
+            ghostIndex -= 1;
+            if (ghostTarget <= 0)
+            {
+                ghostTarget = Static_Data.segments + ghostTarget;
+            }
+            if (ghostIndex < 0)
+            {
+                ghostIndex = Static_Data.segments + ghostIndex;
+            }
+        }
+
+        System.Random random = new System.Random();
+        int rndidx = random.Next(selectableSectors.Count);
+        targetSector = selectableSectors[rndidx];
+
         for (int i = 0; i < 4; i++)
         {
             if (targetSector - i == Static_Data.segments)
@@ -195,6 +265,6 @@ public class Whirlgig : MonoBehaviour
             segmentAngles[i, 1] = tmpFin;
         }
         slowable = false;
-        StartSpin();
+        StartSpin(400,400);
     }
 }

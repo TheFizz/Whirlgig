@@ -57,7 +57,7 @@ LightmapSettings:
     serializedVersion: 12
     m_Resolution: 2
     m_BakeResolution: 40
-    m_AtlasSize: 2048
+    m_AtlasSize: 1024
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -1088,15 +1088,15 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 0.3
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 3
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
@@ -1134,8 +1134,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.0685147e+28, y: 0.00091697724, z: 1.3563128e-19,
-    w: 1.3563156e-19}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1147,7 +1146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 16.34, z: 0}
+  m_LocalPosition: {x: 0, y: 14.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1264,6 +1263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3a36bec8a39de4b8c15b14282805f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spin: {fileID: 2053044568}
+  dome: {fileID: 1629815045}
   whirlgigArrow: {fileID: 1742275113}
   pinpoint: {fileID: 19918349}
   segmentPrefab: {fileID: 7313592067617551547, guid: bc4d1053c84324942a1fb839b3ba5360,
@@ -1315,6 +1316,8 @@ MonoBehaviour:
   SpinPlusButton: {fileID: 125783397}
   CenterButton: {fileID: 537913402}
   targetSectorInput: {fileID: 232618367}
+  selectableSectors: 
+  targetSector: 4
 --- !u!114 &874245650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2098,6 +2101,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1629815043}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1629815045 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2534866581884222612, guid: 52b6524c133a6db408c9d67d3de17d40,
+    type: 3}
+  m_PrefabInstance: {fileID: 1629815043}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1636577019
 GameObject:
   m_ObjectHideFlags: 0
@@ -2546,7 +2555,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 874245649}
-        m_MethodName: StartSpin
+        m_MethodName: CheckScript
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2693,6 +2702,12 @@ PrefabInstance:
 --- !u!4 &2053044567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 511126e5c25a3fd48b5091bef3fc5746,
+    type: 3}
+  m_PrefabInstance: {fileID: 2053044566}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2053044568 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2534866581884222612, guid: 511126e5c25a3fd48b5091bef3fc5746,
     type: 3}
   m_PrefabInstance: {fileID: 2053044566}
   m_PrefabAsset: {fileID: 0}

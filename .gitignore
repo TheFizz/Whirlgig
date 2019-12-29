@@ -1,3 +1,15 @@
+# =============== #
+# Unity generated #
+# =============== #
+[Tt]emp/
+[Oo]bj/
+/[Ll]ibrary/
+sysinfo.txt
+*.stackdump
+/Assets/AssetStoreTools*
+*.apk
+*.unitypackage
+ 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
